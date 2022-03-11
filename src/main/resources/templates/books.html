@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8" />
+    <title>Books | Public Library</title>
+
+</head>
+<body>
+Books page is available for members
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="book, iter: ${books}">
+        <td th:text="${iter.index}"></td>
+        <td th:text="${book}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
